@@ -1,0 +1,31 @@
+<p>task3 works!</p>
+<h1>{{viewname}}</h1>
+<h1>Welcome, {{ name }}!</h1>
+<span>{{ changename()}}</span>
+<h1>Welcome, {{ getname() }}!</h1>
+<p>Your favorite number is {{ favoriteNumber }}.</p>
+<p>Your result is {{getnumber() }}.</p>
+<div>
+
+    <h1>{{ text }}</h1>
+    <img [src]="imageUrl" alt="ExampleImage" width="400px" height="400px">
+</div>
+<div>
+    <button [disabled]="isDisabled">{{ buttonText }}</button>
+</div>
+<div>
+    <button [disabled]="isDisabledd">{{ buttonTextt }}</button>
+</div>
+<div [class.highlight]="isHighlighted" [class.background]="hasBackground">
+    Welcome to the Example Component!
+</div>
+<form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" [value]="getname()"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" [value]="viewname">
+    <button (click)="onClickButton()">Click me!</button><br>
+  </form>
+  <input type="text" (keyup)="onKeyUp($event)"><br>
+  <input [(ngModel)]="message" placeholder="Enter a message">
+<p>You entered:{{message}}</p>
